@@ -3,14 +3,14 @@ class Stack:
         self.stack = []
 
     def push(self, val):
-        self.stack.insert(0, val)  # ❌ Wrong direction (inefficient)
-    
+        self.stack.append(val)  # ✅ Push to top
+
     def pop(self):
         if not self.stack:
             return None
-        return self.stack.pop(0)  # ❌ Removes from front
+        return self.stack.pop()  # ✅ Pop from top
 
 s = Stack()
 s.push(1)
 s.push(2)
-print(s.pop())  # Expected 2
+print(s.pop())  # ✅ 2
